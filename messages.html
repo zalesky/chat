@@ -1,0 +1,18 @@
+<template name="messages">
+<div class="content-container">
+    <ul> messages:
+        {{#each messages}}
+            {{> message}}
+        {{/each}}
+    </ul>
+    <form class="inputMsg">
+        <input type="text" name="text" placeholder="Type your message" autocomplete="off"/>
+    </form>
+</div>
+</template>
+
+<template name="message">
+    <li>
+        {{time}} / {{username}}: {{message}}
+    </li>
+</template>

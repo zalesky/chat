@@ -1,0 +1,29 @@
+<template name="navigation">
+    <header>
+    <ul>
+        <li><a href="{{pathFor route='home'}}"><h1>FastChat</h1></a></li>
+        {{#if currentUser}}
+            <li><a href="#" class="logout">Logout</a></li>
+            <li><a href="{{pathFor route='editprof'}}">Edit profile</a></li>
+        {{else}}
+            <li><a href="{{pathFor route='register'}}">Register</a></li>
+            <li><a href="{{pathFor route='login'}}">Login</a></li>
+        {{/if}}
+    </ul>
+    </header>
+{{#if currentUser}}
+    <nav>
+    <ul>
+        {{#each location}}
+            <li><a href="/loc/{{text}}">{{text}}</a></li>
+        {{/each}}
+    </ul>
+    </nav>
+{{/if}}
+</template>
+<template name="location">
+    <div class="container container-cht">
+    <h2>Current location: {{text}}</h2>
+    {{> messages}}
+    </div>
+</template>

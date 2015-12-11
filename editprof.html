@@ -1,0 +1,21 @@
+<template name="editprof">
+    <div class="container">
+    <h2>edit profile</h2>
+    <form class="login">
+        <p>Change the field what you want</p>
+        <p><label>Email: <input type="email" name="email" placeholder="{{mail}}"></label></p>
+        <p><label>Name: <input type="text" name="name" placeholder="{{name}}"></label></p>
+        <p><label>To set a new password: <input type="password" name="newpassword"></label>
+            <br/><label>you have to write an old password: <input type="password" name="oldpassword"></label></p>
+        <p><label>Location:
+            <select name="location">
+                {{#each location}}
+                    <option value="{{text}}">{{text}}</option>
+                {{/each}}
+            </select>
+            </label>
+        </p>
+        <p><label><input type="reset" value="Cancel"> <input type="submit" value="Save"></label></p>
+    </form>
+    </div>
+</template>
