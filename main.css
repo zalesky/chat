@@ -27,10 +27,10 @@ h2{
  .content-container{
      margin: 0 auto;
      bottom: 0;
-     position: absolute;
      overflow-y: auto;
      max-height: 70%;
      overflow-x: hidden;
+     height:600px;
 }
 li{
     list-style: none;
